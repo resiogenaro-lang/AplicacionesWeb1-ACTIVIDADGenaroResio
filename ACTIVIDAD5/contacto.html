@@ -3,102 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lic. Martín Gómez - Contacto</title>
+    <title>Lic. Martín Gómez</title>
 </head>
 <body>
-    <table border="0" width="100%" cellspacing="0" cellpadding="10">
-        <!-- ENCABEZADO -->
-        <tr>
-            <td colspan="2" bgcolor="#f4f4f4">
-                <h2>Lic. Martín Gómez</h2>
-                <p>
-                    <a href="./index.html">Página Principal</a> | 
-                    <a href="./contacto.html">Sección de Contacto</a>
-                </p>
-            </td>
-        </tr>
+    <header>
+        <a href="./index.html" aria-label="Ir al Inicio">
+            <img src="./recursos/imagenes/logo-psicologia.png" alt="Logo Lic. Martín Gómez">
+        </a>
+        <nav>
+            <a href="./index.html">
+                Inicio
+            </a>
+            <a href="./contacto.html">
+                Contacto
+            </a>
+        </nav>
+    </header>
+    <main>
+        <h1>Contacto</h1>
+        <h2>
+            Escribinos
+        </h2>
+        <p>Si tenés alguna consulta sobre los turnos disponibles, las modalidades de atención o querés coordinar una primera entrevista, completá el siguiente formulario. Te responderé a la brevedad a tu correo electrónico.</p>
+        
+        <form action="./contacto.html" method="post">
+            <label for="id-nombre">Nombre y Apellido</label>
+            <input type="text" name="nombre" id="id-nombre">
 
-        <!-- CONTENIDO PRINCIPAL -->
-        <tr>
-            <td width="55%" valign="top">
-                <h1>Formulario de Contacto</h1>
-                <p>Si tenés alguna consulta sobre los turnos disponibles, las modalidades de atención o querés coordinar una primera entrevista, completá el siguiente formulario. Te responderé a la brevedad a tu correo electrónico.</p>
-                
-                <form action="./contacto.html" method="post">
-                    <table border="0" cellpadding="5">
-                        <tr>
-                            <td><label for="id-nombre">Nombre y Apellido:</label></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" name="nombre" id="id-nombre" size="35"></td>
-                        </tr>
-                        
-                        <tr>
-                            <td><label for="id-telefono">Teléfono de contacto:</label></td>
-                        </tr>
-                        <tr>
-                            <td><input type="tel" name="telefono" id="id-telefono" size="35"></td>
-                        </tr>
+            <label for="id-telefono">Teléfono de contacto</label>
+            <input type="tel" name="telefono" id="id-telefono">
 
-                        <tr>
-                            <td><label for="id-email">Correo Electrónico:</label></td>
-                        </tr>
-                        <tr>
-                            <td><input type="email" name="email" id="id-email" size="35"></td>
-                        </tr>
+            <label for="id-email">Correo Electrónico</label>
+            <input type="email" name="email" id="id-email">
 
-                        <tr>
-                            <td><label for="id-motivo">Motivo de consulta:</label></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <select name="motivo-consulta" id="id-motivo">
-                                    <option value="primera">Primera vez</option>
-                                    <option value="seguimiento">Seguimiento</option>
-                                    <option value="general">Consultas generales</option>
-                                </select>
-                            </td>
-                        </tr>
+            <label for="id-motivo">Motivo de consulta</label>
+            <select name="motivo-consulta" id="id-motivo">
+                <option value="primera">Primera vez</option>
+                <option value="seguimiento">Seguimiento</option>
+                <option value="general">Consultas generales</option>
+            </select>
 
-                        <tr>
-                            <td><label for="id-edad">Edad:</label></td>
-                        </tr>
-                        <tr>
-                            <td><input type="number" name="edad" id="id-edad"></td>
-                        </tr>
+            <label for="id-edad">Edad</label>
+            <input type="number" name="edad" id="id-edad">
 
-                        <tr>
-                            <td><label for="id-comentario">Mensaje o detalle de la consulta:</label></td>
-                        </tr>
-                        <tr>
-                            <td><textarea name="comentario" id="id-comentario" rows="4" cols="35"></textarea></td>
-                        </tr>
+            <label for="id-comentario">Mensaje o detalle de la consulta</label>
+            <textarea name="comentario" id="id-comentario"></textarea>
+            
+            <input type="submit" value="Enviar">
 
-                        <tr>
-                            <td>
-                                <br>
-                                <input type="submit" value="Enviar Datos">
-                                <button type="reset">Limpiar</button>
-                            </td>
-                        </tr>
-                    </table>
-                </form>
-            </td>
+            <button type="reset">
+                Limpiar 
+            </button> 
+            <button type="submit">
+                Enviar
+            </button>
+        </form>
 
-            <!-- UBICACIÓN Y MAPA -->
-            <td width="45%" valign="top" bgcolor="#fafafa">
-                <h2>Dónde estamos</h2>
-                <p>Bv. San Juan 200 - Bº Nueva Córdoba</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.789973276025!2d-64.1914771237341!3d-31.41991219642294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a286a09424ab%3A0x637dd38a25e5eb11!2sBlvd.%20San%20Juan%20200%2C%20X5022%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1788354755773!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </td>
-        </tr>
-
-        <!-- PIE DE PÁGINA -->
-        <tr>
-            <td colspan="2" bgcolor="#e2e2e2" align="center">
-                <p>Seguinos en Instagram: <a href="https://instagram.com/@lic.martingomez" target="_blank">@lic.martingomez</a></p>
-            </td>
-        </tr>
-    </table>
+        <h2>
+            Donde estan
+        </h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.3503270546285!2d-64.1884278!3d-31.432021099999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a28c881143dd%3A0xa685abda62d1237e!2sPje.%20Valtodano%201351%2C%20X5000%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1788379996651!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </main>
+    <footer>
+        <ul>
+            <li>
+                <a href="https://instagram.com/@lic.martingomez" target="_blank">
+                    @lic.martingomez
+                </a>
+            </li>
+            <li>
+                Pje. Valtodano 1351 - Córdoba 
+            </li>
+        </ul>
+    </footer>
 </body>
 </html>
