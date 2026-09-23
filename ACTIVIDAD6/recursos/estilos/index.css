@@ -42,9 +42,10 @@ a {
 .contenido-principal form input {
   display: block;
   width: 100%;
+  margin-bottom: 10px;
 }
 
 .pie-principal {
   background-color: red;
+  padding: 10px;
 }
-

@@ -1,7 +1,12 @@
- { "name": "actividad'6'web",
- "version": "1.0.0",
- "description": "actividad-6 aplicacin web",
- "main": "index.html",
- "scripts": {"dev":"five-server"},
- "dependencies": {"five server":"^0.3.18"}
- }
+{
+  "name": "actividad-6-web",
+  "version": "1.0.0",
+  "description": "actividad-6 aplicacion web",
+  "main": "index.html",
+  "scripts": {
+    "dev": "five-server"
+  },
+  "dependencies": {
+    "five-server": "^0.5.0"
+  }
+}
