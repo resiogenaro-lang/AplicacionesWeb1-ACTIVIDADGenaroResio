@@ -13,11 +13,11 @@ ul {
 }
 
 body {
-  background-color: red;
+  background-color: rgb(255, 0, 0);
 }
 
 a {
-  color: red;
+  color: (255, 0, 0, 0);
   text-decoration: none;
 }
 
@@ -32,7 +32,7 @@ a {
   height: 120px;
   padding: 5px;
   border: 1px solid;
-  background-color: rgb(165, 42, 42);
+  background-color: rgba(165, 42, 42, 0);
 }
 
 .contenido-principal {
