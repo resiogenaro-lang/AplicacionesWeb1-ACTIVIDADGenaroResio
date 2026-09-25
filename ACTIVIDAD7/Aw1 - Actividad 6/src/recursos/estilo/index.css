@@ -1,47 +1,23 @@
-/*
-Sintaxis
-*/
 
-/*regla de estilo (rule) */
-/*
-selector {
-    propiedad1: valor;
-    propiedad2: valor;
-}
-*/
-
-/*IMPORTAR FUENTE*/
 @font-face {
     font-family: Poppins;
     src: url(fuentes/Poppins-Regular.ttf);
 }
 
-
-/*SELECTOR UNIVERSAL */
-
-*{
-    /*outline: 1px red solid; */
-}
-
-
-/* Selectores de TIPO */
-
+/* Modelo de caja alternativo obligatorio */
 html {
     font-family: Poppins, Verdana, Geneva, Tahoma, sans-serif;
-    box-sizing: border-box; /* Actividad 7: Modelo de caja alternativo */
+    box-sizing: border-box;
 }
 
-/* Actividad 7: Modelo de caja alternativo para todos los elementos */
 *, *:before, *:after {
     box-sizing: inherit;
 }
 
 body {
     background-color: #f4f7f6;
-    /* Actividad 7: Aplicar grilla al layout principal */
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -54,15 +30,72 @@ a:hover {
 }
 
 
-/* Selectores de CLASE */
-/*.vinculos{
-    color: #ffffff;
-}*/
+.encabezado-principal {
+    padding: 15px 30px;
+    background-color: #1b365d; 
+    border-bottom: 3px solid #2e6b9e; 
+    /* Inmovilizar el encabezado al hacer scroll */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    /* Contenedor flexible */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.encabezado-principal nav {
+    display: flex;
+    gap: 20px;
+    background-color: transparent; 
+    border: none;
+    margin-top: 0;
+}
+
+.encabezado-principal nav a {
+    color: #ffffff; 
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.encabezado-principal nav a:hover {
+    color: #ffd166; 
+}
 
 
-/* CONTENIDO PRINCIPAL */
+.contenido-principal {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
 
-.pie-principal {
+/* Estilos de formulario para prolijidad */
+.contenido-principal form p {
+    margin-bottom: 15px;
+}
+
+.contenido-principal label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contenido-principal input[type="text"],
+.contenido-principal input[type="tel"],
+.contenido-principal input[type="number"],
+.contenido-principal select,
+.contenido-principal textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+.pie-pagina-sitio, .pie-principal {
     background-color: #9e9e9e;
     color: #ffffff;
     text-align: center;
@@ -70,81 +103,27 @@ a:hover {
     margin-top: 30px;
 }
 
-/*ATRIBUTO */
-[href]{
-
+.pie-pagina-sitio ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
-
-/*
-    ENCABEZADO Y NAVEGACIÓN (Nuevos Colores)
-*/
-
-.encabezado-principal {
-    padding: 10px 20px;
-    background-color: #1b365d; 
-    border-bottom: 3px solid #2e6b9e; 
-    /* Actividad 7: Inmovilizar encabezado al hacer scroll (sticky) y contenedores flexibles */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-.encabezado-principal nav {
-    width: auto;
-    padding: 10px;
-    border: none;
-    background-color: transparent; 
-    margin-top: 0;
-    border-radius: 4px;
-}
-
-
-.encabezado-principal nav a {
-    color: #ffffff; 
-    font-weight: bold;
-    margin-right: 20px;
-}
-
-
-.encabezado-principal nav a:hover {
-    color: #ffd166; 
-}
-
-
-
-.contenido-principal {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    /* Actividad 7: Grilla aplicada al contenido */
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    align-content: start;
-}
-
 
 
 .btn-flotante {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 25px;
+    right: 25px;
     background-color: #25d366;
     color: #ffffff;
-    width: 55px;
-    height: 55px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 28px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-size: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     z-index: 1100;
     transition: transform 0.2s ease;
 }
